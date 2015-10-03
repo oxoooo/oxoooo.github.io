@@ -1,0 +1,7 @@
+exclude: [ ".DS_Store", ".gitignore", "README.md", "CNAME" ]
+
+markdown: redcarpet
+highlighter: pygments
+
+sass:
+    style: :compressed
