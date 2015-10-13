@@ -1,114 +1,191 @@
 body > article {
 
-  margin: 0 auto;
   padding: 0 0 200px;
 
-  #screenshot {
-    width: 300px;
-    height: 300px;
+  > * {
     margin: 0 auto;
-    overflow: hidden;
+    padding: 50px 0 100px;
 
-    margin-top: -20px;
-
-    img {
-      width: 100%;
-    }
-
-    &::before {
-      display: block;
-      content: '';
-      height: 20px;
-      position: relative;
-      z-index: 10;
-      top: 280px;
-      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    @media (min-width: 1000px) {
+      width: 800px;
     }
   }
 
-  h2 {
+  h2, h3, p {
     text-align: center;
-    margin: 0;
-    padding: 20px 50px 0;
-    font-size: 50px;
     font-weight: 100;
-    line-height: 50px;
+
+    @media (min-width: 1000px) {
+      text-align: left;
+    }
   }
 
-  p {
-    text-align: center;
-    margin: 0;
-    padding: 0 50px;
-    font-size: 24px;
-    font-weight: 100;
-  }
-
-  a.button {
-    display: block;
-    text-decoration: none;
-    font-size: 20px;
+  h3 {
     font-weight: 300;
-    padding: 7px 20px;
-    margin: 20px auto;
-    max-width: 240px;
+    color: rgba(0, 0, 0, 0.60);
+  }
 
-    transition: color 500ms, background 500ms;
+  small {
+    font-size: 60%;
+    opacity: 0.5;
+  }
 
-    border: 2px solid #000;
-    color: #000;
-    background: #FFF;
+  #mantou {
 
-    &:hover {
-      color: #FFF;
-      background: #000;
+    > * {
+      margin: 0;
     }
 
-    &.download {
-      margin-top: 50px;
+    #screenshot {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
 
-      border: 2px solid #090;
-      color: #090;
+      margin-top: -20px;
+
+      img {
+        width: 100%;
+      }
+
+      &::before {
+        display: block;
+        content: '';
+        height: 20px;
+        position: relative;
+        z-index: 10;
+        top: 280px;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      }
+    }
+
+    h2 {
+      padding: 20px 50px 0;
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    h3 {
+      padding: 50px 50px 0;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    p {
+      padding: 0 50px;
+      font-size: 24px;
+    }
+
+    a.button {
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 300;
+      padding: 7px 20px;
+      margin: 20px auto;
+      max-width: 240px;
+
+      transition: color 500ms, background 500ms;
+
+      border: 2px solid #000;
+      color: #000;
       background: #FFF;
+
+      &:hover {
+        color: #FFF;
+        background: #000;
+      }
+
+      &.download {
+        border: 2px solid #090;
+        color: #090;
+        background: #FFF;
+
+        &:hover {
+          color: #FFF;
+          background: #090;
+        }
+      }
+    }
+
+    @media (min-width: 1000px) {
+
+      > * {
+        margin: 0 0 0 400px;
+      }
+
+      #screenshot {
+        float: left;
+        margin: 0;
+        height: 400px;
+        &::before {
+          top: 380px;
+        }
+      }
+
+      h2 {
+        padding: 50px 0 0;
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      h3 {
+        padding: 30px 0 5px;
+      }
+
+      p {
+        padding: 0;
+        font-size: 30px;
+      }
+
+      a.button {
+        display: inline-block;
+        margin: 10px 0;
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+    }
+
+  }
+
+  #libraries {
+
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    a {
+      font-weight: 300;
+      padding: 0 0.25em;
+      margin: 0 -0.25em;
+      border-radius: 1px;
+      text-decoration: none;
+      color: #090;
+
+      transition: color 500ms, background 500ms;
 
       &:hover {
         color: #FFF;
         background: #090;
       }
     }
-  }
 
-  @media (min-width: 1000px) {
+    ul {
+      padding: 0 0 0 2em;
+      margin: 20px;
 
-    width: 800px;
-
-    #screenshot {
-      float: left;
+      li {
+        padding: 5px 0;
+      }
     }
 
-    h2 {
-      margin: 0 0 0 400px;
-      padding: 0;
-      font-size: 60px;
-      line-height: 60px;
-      text-align: left;
-    }
-
-    p {
-      margin: 0 0 0 400px;
-      padding: 0;
-      font-size: 30px;
-      text-align: left;
-    }
-
-    a.button {
-      display: inline-block;
-      margin: 10px 0;
-    }
-
-    &::after {
-      display: block;
-      content: '';
-      clear: both;
+    @media (min-width: 1000px) {
+      ul {
+        margin: 0;
+      }
     }
 
   }
