@@ -4,7 +4,7 @@ body > article {
 
   > * {
     margin: 0 auto;
-    padding: 50px 0 100px;
+    padding: 50px 0 0;
 
     @media (min-width: 1000px) {
       width: 800px;
@@ -32,11 +32,13 @@ body > article {
 
   .app {
 
+    margin-bottom: 200px;
+
     > * {
       margin: 0;
     }
 
-    #screenshot {
+    .screenshot {
       width: 250px;
       margin: 0 auto;
 
@@ -105,7 +107,7 @@ body > article {
         margin: 0 0 0 300px;
       }
 
-      #screenshot {
+      .screenshot {
         float: left;
         margin: 0;
       }
@@ -142,7 +144,7 @@ body > article {
 
   #mantou {
 
-    #screenshot {
+    .screenshot {
       width: 300px;
       height: 300px;
       overflow: hidden;
@@ -178,7 +180,8 @@ body > article {
         margin: 0 0 0 400px;
       }
 
-      #screenshot {
+      .screenshot {
+        margin: 0;
         height: 400px;
         &::before {
           top: 380px;
